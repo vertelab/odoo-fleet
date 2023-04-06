@@ -13,12 +13,11 @@ class FleetVehicleInherit(models.Model):
     model_id = fields.Many2one('fleet.vehicle.model', 'Model',
         tracking=True, required=False, help='Model of the vehicle')
     
-    # engine_size = fields.Char(string='Engine Size')
-    indicative_value = fields.Char(string='Indicative Value')
-    body_style = fields.Char(string='Body Style')
-    registration_date = fields.Char(string='Registration Date')
-    last_inspection_date = fields.Char(string="Last Inspection Date")
-
+    indicative_value = fields.Char(string='Indicative Value', help='The indicative value of the vehicle')
+    body_style = fields.Char(string='Body Style', help='The body style of the vehicle')
+    registration_date = fields.Char(string='Registration Date', help='The registration date of the vehicle')
+    last_inspection_date = fields.Char(string="Last Inspection Date", help='The date of the last vehicle inspection')
+    
     
     def _search_vehicle_make(self, make):
         make_id = self.env['fleet.vehicle.model.brand'].search([('name', '=ilike', make)], limit=1)
