@@ -36,7 +36,6 @@
     'website': 'https://vertel.se/apps/',
     'images': ['static/description/banner.png'], # 560x280 px.
     'license': 'AGPL-3',
-    'contributor': '',
     'maintainer': 'Vertel AB',
     'repository': 'https://github.com/vertelab/odoo-',
     'depends': ['base', 'fleet'],
@@ -44,7 +43,7 @@
         'views/fleet_vehicle_view.xml'       
     ],
     'installable': True,
-    'application': True,
+    'application': False,
     'auto_install': False,
 }
     # Any module necessary for this one to work correctly
