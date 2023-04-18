@@ -4,13 +4,22 @@ import json
 from requests.auth import HTTPBasicAuth
 import logging
 
+class MyModuleSettings(models.TransientModel):
+    _inherit = 'res.config.settings'
+
+    vehicle_api_username = fields.Char(
+        string="Vehicle API Username",
+        config_parameter='vehicle_api_username')
+    vehicle_api_password = fields.Char(
+        string="Vehicle API Password",
+        config_parameter='vehicle_api_password')
+
 class VehicleInformation(models.Model):
     _name = 'vehicle.information'
     _description = 'Vehicle Information'
-    _order = 'create_date desc, id desc'
+    _order = 'create_date desc, id desc'    
     
     name = fields.Char(string='Name')
-
     registration_number = fields.Char(string='Registration Number')
     make = fields.Char(string='Make')
     model = fields.Char(string='Model')
@@ -30,12 +39,8 @@ class VehicleInformation(models.Model):
     def get_vehicle_information(self, registration_number):
         logging.warning(f"{registration_number=}")
         vehicle_reg_no = registration_number[0]
-        username = "salih"
-        password = "3xV2qYSKmseESqX"
-        #username = "salih"
-        #password = "3xV2qYSKmseESqX"
-        #testreg = xzz268
-
+        username = self.env['ir.config_parameter'].sudo().get_param('vehicle_api_username')
+        password = self.env['ir.config_parameter'].sudo().get_param('vehicle_api_password')
         url = "https://www.regcheck.org.uk/api/json.aspx/CheckSweden/"
         url = url + "%s" % (vehicle_reg_no.replace(" ", ""))
         r = requests.get(url, auth=HTTPBasicAuth(username, password))

@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+  <data>
+    <record id="res_config_settings_view_form" model="ir.ui.view">                                        
+      <field name="name">res.config.settings.view.form.inherit.api_regcheck</field>                                        
+      <field name="model">res.config.settings</field>                                        
+      <field name="inherit_id" ref="base.res_config_settings_view_form"></field>                                        
+      <field name="arch" type="xml">                                            
+        <xpath expr="//div[hasclass('settings')]" position="inside">
+          <div class="app_settings_block" data-string="api_regcheck_configuration_settings" string="API RegCheck Configuration" data-key="api_regcheck_configuration_settings">
+            <h2>Custom fields configuration</h2>                                                    
+            <div class="row mt16 o_settings_container">                                                        
+              <div class="col-xs-12 col-md-6 o_setting_box" id="vehicle_api_username">                                                            
+                <div class="o_setting_right_pane">                                                                
+                  <label string="Username" for="vehicle_api_username"></label>                                                                
+                  <div class="text-muted">Fill in the Reg Check API Usersame</div>                                                                
+                  <div class="mt16">                                                                    
+                    <field name="vehicle_api_username" required="1"></field>                                                                
+                  </div>                                                            
+                </div>                                                        
+              </div>                                                        
+              <div class="col-xs-12 col-md-6 o_setting_box" id="vehicle_api_password">                                                            
+                <div class="o_setting_right_pane">                                                                
+                  <label string="Password" for="vehicle_api_password"></label>                                                                
+                  <div class="text-muted">Fill in the Reg Check API Password</div>                                                                
+                  <div class="mt16">                                                                    
+                    <field name="vehicle_api_password" password="True"></field>                                                                
+                  </div>                                                            
+                </div>                                                        
+              </div>            
+            </div>
+          </div>
+        </xpath>
+      </field>
+    </record>
+  </data>
+</odoo>

@@ -11,7 +11,8 @@
     
     #    'views/snippets/register.xml',
          'views/templates.xml',
-         'views/vehicle_information.xml'
+         'views/vehicle_information.xml',
+         'views/res_config_settings_view.xml',
         #  'static/src/img/plate_number.png',
          #'views/snippets/snippets.xml',
         

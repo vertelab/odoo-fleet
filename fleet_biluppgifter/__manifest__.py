@@ -47,4 +47,4 @@
     'auto_install': False,
 }
     # Any module necessary for this one to work correctly
-# vim:expandtab:smartindent:tabstop=4:softtabstop=4:shiftwidth=4:
+    # vim:expandtab:smartindent:tabstop=4:softtabstop=4:shiftwidth=4:
