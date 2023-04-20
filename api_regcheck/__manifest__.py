@@ -5,7 +5,7 @@
     'author': "Your Name",
     'category': 'Fleet',
     'version': '14.0.1',
-    'depends': ['base', 'website'],
+    'depends': ['base', 'website', 'fleet_reg_common'],
     'data': [
        'security/ir.model.access.csv',
     

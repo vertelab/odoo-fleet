@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        <record id="biluppgifter_res_config_settings_view_form" model="ir.ui.view">
+            <field name="name">fleet_reg_common.res.config.settings.view.form.inherit</field>
+            <field name="model">res.config.settings</field>
+            <field name="inherit_id" ref="fleet_reg_common.fleet_reg_common_res_config_settings_view_form"/>
+            <field name="arch" type="xml">
+                <xpath expr="//span[@id='fleet_reg_common']" position="after">
+                    <h2>Biluppgifter API</h2>
+                    <div class="row mt16 o_settings_container">
+                        <div class="col-xs-12 col-md-6 o_setting_box" id="biluppgifter_url">
+                            <div class="o_setting_right_pane">
+                                <label string="URL" for="biluppgifter_url"/>
+                                <div class="text-muted">Fill in the biluppgifter URL</div>
+                                <div class="mt16">
+                                    <field name="biluppgifter_url" required="1"/>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </xpath>
+            </field>
+        </record>
+    </data>
+</odoo>

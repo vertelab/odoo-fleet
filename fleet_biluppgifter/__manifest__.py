@@ -38,9 +38,9 @@
     'license': 'AGPL-3',
     'maintainer': 'Vertel AB',
     'repository': 'https://github.com/vertelab/odoo-',
-    'depends': ['base', 'fleet'],
+    'depends': ['base', 'fleet_reg_common', 'fleet_reg_common'],
     'data': [
-        'views/fleet_vehicle_view.xml'       
+        'views/res_config_settings_view.xml'
     ],
     'installable': True,
     'application': False,
