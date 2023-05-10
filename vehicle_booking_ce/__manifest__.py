@@ -20,7 +20,7 @@
 ##############################################################################
 
 {
-    'name': 'Fleet: reg_common',
+    'name': 'Vehicle_booking_ce',
     'version': '14.0.0.0.0',
     # Version ledger: 14.0 = Odoo version. 1 = Major. Non regressionable code. 2 = Minor. New features that are regressionable. 3 = Bug fixes
     'summary': '',
@@ -36,15 +36,12 @@
     'license': 'AGPL-3',
     'maintainer': 'Vertel AB',
     'repository': 'https://github.com/vertelab/odoo-',
-    'depends': ['fleet'],
+    'depends': ['website_calendar_ce'],
     'data': [
-            
-        'views/fleet_view.xml',
-        'views/res_config_settings_view.xml'       
+        'views/templates.xml'
+                 
     ],
     'installable': True,
     'auto_install': True,
     'application': False,
 }
-    # Any module necessary for this one to work correctly
-    # vim:expandtab:smartindent:tabstop=4:softtabstop=4:shiftwidth=4:

@@ -2,8 +2,8 @@
     <!-- Assets -->
     <template id="assets_frontend" inherit_id="website.assets_frontend">
         <xpath expr="." position="inside">
-            <link rel="stylesheet" type="text/scss" href="/api_regcheck/static/src/scss/styles.scss" t-ignore="true"/>
-            <script type="text/javascript" src="/api_regcheck/static/src/js/get_car_model.js"/>
+            <link rel="stylesheet" type="text/scss" href="/fleet_regcheck/static/src/scss/styles.scss" t-ignore="true"/>
+            <script type="text/javascript" src="/fleet_regcheck/static/src/js/get_car_model.js"/>
         </xpath>
     </template> 
     
@@ -18,7 +18,7 @@
                         <label for="plate_number">Vehicle Plate Number</label>
                             <div class="input-group">
                                 <div class="input-group-prepend">
-                                   <img src="api_regcheck/static/src/img/Eu_s.svg.png" alt="Flagga" class="input-group-text" style="width: 32px; height: 70px; padding: 0px; object-fit: contain; border: none; outline: none;" />
+                                   <img src="fleet_regcheck/static/src/img/Eu_s.svg.png" alt="Flagga" class="input-group-text" style="width: 32px; height: 70px; padding: 0px; object-fit: contain; border: none; outline: none;" />
                                 <input type="text" class="form-control" id="plate_number" placeholder="Enter Plate Number" style="text-align: center; text-transform: uppercase; font-size: 66px; font-family: Arial; letter-spacing: 3px; height: 70px; width: 100%; padding-left: 0;"/>
                                 </div>
                             </div>    
@@ -105,8 +105,8 @@
     Assets
     <template id="assets_frontend" inherit_id="website.assets_frontend">
         <xpath expr="." position="inside">
-            <link rel="stylesheet" type="text/scss" href="/api_regcheck/static/src/scss/styles.scss" t-ignore="true"/>
-            <script type="text/javascript" src="/api_regcheck/static/src/js/get_car_model.js"/>
+            <link rel="stylesheet" type="text/scss" href="/fleet_regcheck/static/src/scss/styles.scss" t-ignore="true"/>
+            <script type="text/javascript" src="/fleet_regcheck/static/src/js/get_car_model.js"/>
         </xpath>
     </template> 
     
@@ -187,8 +187,8 @@
     Assets
     <template id="assets_frontend" inherit_id="website.assets_frontend">
         <xpath expr="." position="inside">
-            <link rel="stylesheet" type="text/scss" href="/api_regcheck/static/src/scss/styles.scss" t-ignore="true"/>
-            <script type="text/javascript" src="/api_regcheck/static/src/js/get_car_model.js"/>
+            <link rel="stylesheet" type="text/scss" href="/fleet_regcheck/static/src/scss/styles.scss" t-ignore="true"/>
+            <script type="text/javascript" src="/fleet_regcheck/static/src/js/get_car_model.js"/>
         </xpath>
     </template> 
 

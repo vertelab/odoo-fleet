@@ -1,4 +1,4 @@
-odoo.define('api_regcheck.reg_check', function (require) {
+odoo.define('fleet_regcheck.reg_check', function (require) {
     'use strict';
 
     console.log("loaddeddd")

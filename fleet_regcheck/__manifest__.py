@@ -1,5 +1,5 @@
 {
-    'name': "Vehicle API Regcheck",
+    'name': "Fleet: Regcheck",
     'summary': "A module to access vehicle information using registration number",
     'description': "This module allows you to access vehicle information using registration number",
     'author': "Your Name",
