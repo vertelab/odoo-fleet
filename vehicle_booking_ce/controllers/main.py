@@ -17,12 +17,14 @@ _logger = logging.getLogger(__name__)
 
 
 class WebsiteVehicleCalendar(WebsiteCalendar):
+
     @http.route([
         '/website/calendar/search'], type='http', auth="public", website=True)
     def search_plate_number(self, **kwargs):
-        return request.render("fleet_regcheck.vehicle_search")
+        return request.render("vehicle_booking_ce.vehicle_search")
+
 
     @http.route([
         '/website/calendar/carinput'], type='http', auth="public", website=True)
-    def search_plate_number(self, **kwargs):
+    def carinput(self, **kwargs):
         return request.render("vehicle_booking_ce.carinput")

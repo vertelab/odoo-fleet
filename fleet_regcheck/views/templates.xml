@@ -5,41 +5,45 @@
             <link rel="stylesheet" type="text/scss" href="/fleet_regcheck/static/src/scss/styles.scss" t-ignore="true"/>
             <script type="text/javascript" src="/fleet_regcheck/static/src/js/get_car_model.js"/>
         </xpath>
-    </template> 
+    </template>
+
+    <template id="search_box">
+        <div class="vehicle-search-container">
+            <div class="card">
+                <div class="card-body">
+                    <h5 class="card-title" style="color: #003399;">Vehicle Search</h5>
+                    <div class="form-group">
+                    <label for="plate_number">Vehicle Plate Number</label>
+                        <div class="input-group">
+                            <div class="input-group-prepend">
+                               <img src="/fleet_regcheck/static/src/img/eu_s.png" alt="Flagga" class="input-group-text" style="width: 32px; height: 70px; padding: 0px; object-fit: contain; border: none; outline: none;" />
+                            <input type="text" class="form-control" id="plate_number" placeholder="Enter Plate Number" style="text-align: center; text-transform: uppercase; font-size: 66px; font-family: Arial; letter-spacing: 3px; height: 70px; width: 100%; padding-left: 0;"/>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                    <label for="model_field">Vehicle Model</label>
+                    </div>
+                     <div class="form_controll1">
+                        <input type="text" class="form-control2" id="model_field"/>
+                    </div>
+                    <div class="text-center">
+                        <a href="#" id="get_car_model">
+                            <button type="button" class="btn btn-primary">GET PLATE Number</button>
+                        </a>
+                    </div>
+                    <div class="about_modul">
+                    <p>This application is a custom module built on Odoo 14 that uses an API from regcheck to retrieve information about cars. When a user interacts with this application, they can search for a car by entering its registration number.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </template>
     
         
     <template id="vehicle_search" name="Website Booking: Search Vehicle">
         <t t-call="website.layout">
-            <div class="vehicle-search-container">
-                <div class="card">
-                    <div class="card-body">
-                        <h5 class="card-title" style="color: #003399;">Vehicle Search</h5>
-                        <div class="form-group">
-                        <label for="plate_number">Vehicle Plate Number</label>
-                            <div class="input-group">
-                                <div class="input-group-prepend">
-                                   <img src="fleet_regcheck/static/src/img/Eu_s.svg.png" alt="Flagga" class="input-group-text" style="width: 32px; height: 70px; padding: 0px; object-fit: contain; border: none; outline: none;" />
-                                <input type="text" class="form-control" id="plate_number" placeholder="Enter Plate Number" style="text-align: center; text-transform: uppercase; font-size: 66px; font-family: Arial; letter-spacing: 3px; height: 70px; width: 100%; padding-left: 0;"/>
-                                </div>
-                            </div>    
-                        </div>  
-                        <div class="form-group">
-                        <label for="model_field">Vehicle Model</label>
-                        </div>
-                         <div class="form_controll1">
-                            <input type="text" class="form-control2" id="model_field"/>
-                        </div>
-                        <div class="text-center">
-                            <a href="#" id="get_car_model">
-                                <button type="button" class="btn btn-primary">GET PLATE Number</button>
-                            </a>
-                        </div>
-                        <div class="about_modul">                                                 
-                        <p>This application is a custom module built on Odoo 14 that uses an API from regcheck to retrieve information about cars. When a user interacts with this application, they can search for a car by entering its registration number.</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
+            <t t-call="fleet_regcheck.search_box"/>
         </t>
     </template>
 </odoo>
