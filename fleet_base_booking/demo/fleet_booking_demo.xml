@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo noupdate="1">
+
+    <record id="booking_type_fleet_vehicle" model="booking.type">
+        <field name="name">Fleet</field>
+        <field name="location_id" ref="base.main_partner"/>
+        <field name="booking_duration">2</field>
+        <field name="max_schedule_days">14</field>
+        <field name="schedule_based_on">resources</field>
+        <field name="assign_method">time_resource</field>
+        <field name="booking_manual_confirmation" eval="True"/>
+        <field name="resource_manual_confirmation_percentage">0.8</field>
+        <field name="message_partner_ids" eval="[(6, 0, [ref('base.partner_admin')])]"/>
+        <field name="event_videocall_source" eval="False"/>
+        <field name="is_published" eval="True"/>
+        <field name="hide_timezone" eval="True"/>
+        <field name="hide_duration" eval="True"/>
+        <field name="slot_ids" eval="[(5, 0, 0)] + [
+            (0, 0, {'weekday': weekday, 'start_hour': start_hour, 'end_hour': start_hour + 2.0})
+            for weekday in ('1', '2', '3', '4', '5', '6', '7')
+            for start_hour in (9, 9.5, 10, 10.5, 11, 14, 14.5, 15, 15.5, 16)
+        ]"/>
+    </record>
+
+</odoo>

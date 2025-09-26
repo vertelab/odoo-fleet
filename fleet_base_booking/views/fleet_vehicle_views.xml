@@ -1,0 +1,13 @@
+<?xml version="1.0"?>
+<odoo>
+    <record id="view_fleet_vehicle_form" model="ir.ui.view">
+        <field name="name">Fleet Vehicle</field>
+        <field name="model">fleet.vehicle</field>
+        <field name="inherit_id" ref="fleet.fleet_vehicle_view_form"/>
+        <field name="arch" type="xml">
+            <field name="company_id" position="after">
+                <field name="booking_resource_id"/>
+            </field>
+        </field>
+    </record>
+</odoo>
