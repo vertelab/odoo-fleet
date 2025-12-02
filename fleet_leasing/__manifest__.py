@@ -34,10 +34,11 @@
     'contributor': '',
     'maintainer': 'Vertel AB',
     'repository': 'https://github.com/vertelab/odoo-fleet',
-    'depends': ['account_loan_template', 'account_fleet'],
+    'depends': ['account_loan_template', 'account_fleet', 'contract_loan'],
     'data': [
         'views/account_loan_views.xml',
-        'views/vehicle_fleet_views.xml'
+        'views/vehicle_fleet_views.xml',
+        'views/account_asset_views.xml',
     ],
     'demo': [],
     'qweb': [],

@@ -15,4 +15,5 @@ class AccountMove(models.Model):
         for line in self.invoice_line_ids:
             if line.asset_profile_id and line.asset_id:
                 line.vehicle_id.asset_id = line.asset_id.id
+                line.asset_id.vehicle_id = line.vehicle_id.id
         return res

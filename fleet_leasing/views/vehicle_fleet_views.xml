@@ -11,6 +11,12 @@
                     <field name="account_loan_count" widget="statinfo" string="Loans"/>
                 </button>
             </xpath>
+
+            <xpath expr="//button[@name='return_action_to_open']" position="replace">
+                <button name="action_view_contract" class="oe_stat_button" icon="fa-book" type="object" string="Contract" invisible="not contract_line_ids">
+                    <field name="contract_contract_count" widget="statinfo" string="Contract"/>
+                </button>
+            </xpath>
         </field>
     </record>
 
