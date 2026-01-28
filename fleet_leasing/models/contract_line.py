@@ -8,8 +8,8 @@ class ContractLine(models.Model):
     _inherit = "contract.line"
 
     vehicle_id = fields.Many2one('fleet.vehicle', readonly=True, related='loan_id.vehicle_id', store=True)
-
-    def _description(self, base_sequence, total_amount):
+    #Can't create a method called _description since it overides the attribute. Can't find the super function were extending.
+    def _description_dep(self, base_sequence, total_amount):
         if self.vehicle_id:
             lines = [{
                 'display_type': 'line_section',
