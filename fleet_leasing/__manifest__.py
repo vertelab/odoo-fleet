@@ -21,12 +21,20 @@
 
 {
     'name': 'Fleet: Leasing',
-    'version': '1.0',
-    'summary': 'Fleet Leasing',
+    'version': '18.0.1.0.0',
+    'summary': 'Fleet Leasing.',
     'category': 'Fleet',
-    'description': """
-        Fleet Leasing
-    """,
+    'description': '''
+Leasing
+=======
+
+    Fleet Leasing.
+
+    Features:
+
+        - UI Integration: Extends 3 view(s) in the Odoo interface.
+        - Extends Odoo: Builds on account.asset, account.loan, account.move, contract.line.
+    ''',
     'author': 'Vertel AB',
     'website': 'https://vertel.se/apps/odoo-fleet/fleet_leasing',
     'images': ['static/description/banner.png'], # 560x280 px

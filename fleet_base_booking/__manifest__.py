@@ -22,9 +22,19 @@
 {
     'name': 'Fleet Booking',
     'version': '18.0.0.0.0',
-    'summary': '',
+    'summary': "Makes fleet vehicles bookable.",
     'category': 'Human Resources/Fleet',
-    'description': """Vehicle Booking""",
+    'description': '''
+Fleet Booking
+=============
+
+    Makes fleet vehicles bookable.
+
+    Features:
+
+        - UI Integration: Extends 1 view(s) in the Odoo interface.
+        - Extends Odoo: Builds on booking.resource, fleet.vehicle.
+    ''',
     # 'sequence': '1',
     'author': 'Vertel AB',
     'website': 'https://vertel.se/apps/odoo-fleet/fleet_base_booking',
