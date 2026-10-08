@@ -2,7 +2,7 @@
 ##############################################################################
 #
 #    Odoo SA, Open Source Management Solution, third party addon
-#    Copyright (C) 2025- Vertel AB (<https://vertel.se>).
+#    Copyright (C) 2025- Vertel Sverige AB (<https://vertel.se>).
 #
 #    This program is free software: you can redistribute it and/or modify
 #    it under the terms of the GNU Affero General Public License as
@@ -21,26 +21,18 @@
 
 {
     'name': 'Fleet: Leasing',
-    'version': '18.0.1.0.0',
-    'summary': 'Fleet Leasing.',
+    'version': '1.0',
+    'summary': 'Fleet Leasing',
     'category': 'Fleet',
-    'description': '''
-Leasing
-=======
-
-    Fleet Leasing.
-
-    Features:
-
-        - UI Integration: Extends 3 view(s) in the Odoo interface.
-        - Extends Odoo: Builds on account.asset, account.loan, account.move, contract.line.
-    ''',
-    'author': 'Vertel AB',
+    'description': """
+        Fleet Leasing
+    """,
+    'author': 'Vertel Sverige AB',
     'website': 'https://vertel.se/apps/odoo-fleet/fleet_leasing',
     'images': ['static/description/banner.png'], # 560x280 px
     'license': 'AGPL-3',
     'contributor': '',
-    'maintainer': 'Vertel AB',
+    'maintainer': 'Vertel Sverige AB',
     'repository': 'https://github.com/vertelab/odoo-fleet',
     'depends': ['account_loan_template', 'account_fleet', 'contract_loan'],
     'data': [
@@ -54,3 +46,4 @@ Leasing
     'application': False,
     'auto_install': False,
 }
+# vim:expandtab:smartindent:tabstop=4:softtabstop=4:shiftwidth=4:
